@@ -1,0 +1,284 @@
+@layer base {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  .title {
+    font-family: var(--font-family-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    margin: 0;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .bannerSection {
+    margin-bottom: var(--spacing-2);
+  }
+
+  .bannerSuccess {
+    background-color: color-mix(in srgb, var(--success) 15%, transparent);
+    border: 1px solid var(--success);
+    color: var(--success);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+  }
+
+  .bannerWarning {
+    background-color: color-mix(in srgb, var(--warning) 15%, transparent);
+    border: 1px solid var(--warning);
+    color: var(--warning-foreground);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+  }
+
+  .bannerContent {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+  }
+
+  .sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin: 0;
+    padding-bottom: var(--spacing-2);
+    border-bottom: 2px solid var(--border);
+  }
+
+  /* Card Styles */
+  .card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-6);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: var(--card-foreground);
+  }
+
+  .cardHighlight {
+    border: 2px solid var(--primary);
+    box-shadow: 0 4px 20px color-mix(in srgb, var(--primary) 15%, transparent);
+  }
+
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+    flex-wrap: wrap;
+  }
+
+  .versionGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  .versionTitleRow {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    flex-wrap: wrap;
+  }
+
+  .versionNumber {
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-family: var(--font-family-monospace);
+    margin: 0;
+  }
+
+  .deviceInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    padding: var(--spacing-2) var(--spacing-4);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  .metaList {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    flex-wrap: wrap;
+  }
+
+  .metaItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+  }
+
+  .changelogBox {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--spacing-4);
+    font-family: var(--font-family-monospace);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    white-space: pre-line;
+    color: var(--surface-foreground);
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .actionArea {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-2);
+  }
+
+  .installButton {
+    width: 100%;
+    max-width: 320px;
+    font-size: 1.125rem;
+  }
+
+  .progressContainer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    max-width: 320px;
+    width: 100%;
+  }
+
+  .progressText {
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: var(--font-family-monospace);
+    min-width: 3ch;
+  }
+
+  /* History List Styles */
+  .historyList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+
+  .historyItem {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+
+  .historyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-4);
+    flex-wrap: wrap;
+  }
+
+  .historyMeta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  .historyVersion {
+    font-family: var(--font-family-monospace);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .historyMetaRow {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    flex-wrap: wrap;
+  }
+
+  .historyActions {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  /* States */
+  .emptyState {
+    padding: var(--spacing-8);
+    text-align: center;
+    color: var(--muted-foreground);
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--border);
+  }
+
+  .errorState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-12) var(--spacing-4);
+    text-align: center;
+    gap: var(--spacing-4);
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--error);
+    color: var(--error);
+  }
+
+  .errorIcon {
+    color: var(--error);
+  }
+
+  .errorTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .errorText {
+    color: var(--foreground);
+    max-width: 400px;
+  }
+}

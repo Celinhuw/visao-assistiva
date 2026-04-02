@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+:root {
+  /* Overlay layers */
+  --z-overlay: 400;
+
+  --z-spotlight: 1000; /* Tutorial spotlights/guided help */
+
+  /* System layers */
+  --z-critical: 2000; /* Critical system notifications */
+
+  /* spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-11: 2.75rem;
+  --spacing-12: 3rem;
+  --spacing-13: 3.25rem;
+  --spacing-14: 3.5rem;
+  --spacing-15: 3.75rem;
+  --spacing-16: 4rem;
+  --spacing-17: 4.25rem;
+  --spacing-18: 4.5rem;
+  --spacing-19: 4.75rem;
+  --spacing-20: 5rem;
+  /* Note: spacing vars only up to 20 */
+}
+
+:root {
+  /* Light Mode - High Contrast */
+  --background: #FFFFFF;
+  --foreground: #000000;
+
+  --surface: #F0F0F0;
+  --surface-foreground: #000000;
+  
+  --sidebar: #E8E8E8;
+  --sidebar-foreground: #000000;
+  
+  --card: #FFFFFF;
+  --card-foreground: #000000;
+  
+  --popup: #FFFFFF;
+  --popup-foreground: #000000;
+  
+  /* High visibility Amber */
+  --primary: #FFB300;
+  --primary-foreground: #000000;
+  
+  --secondary: #000000;
+  --secondary-foreground: #FFFFFF;
+  
+  --accent: #0055FF;
+  --accent-foreground: #FFFFFF;
+  
+  --muted: #E0E0E0;
+  --muted-foreground: #333333;
+  
+  --success: #008A00;
+  --success-foreground: #FFFFFF;
+  
+  --error: #D32F2F;
+  --error-foreground: #FFFFFF;
+  
+  --warning: #F57C00;
+  --warning-foreground: #000000;
+  
+  --info: #0288D1;
+  --info-foreground: #FFFFFF;
+  --info-hover: #0277BD;
+  --info-active: #01579B;
+
+  --border: #000000;
+
+  /* Font Families - Specifically chosen for visual impairment */
+  --font-family-base: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-family-heading: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-family-monospace: 'JetBrains Mono', monospace;
+  --font-family-cursive: 'Atkinson Hyperlegible', system-ui, sans-serif;
+
+  /* Border Radius - Large and distinct for clear touch targets */
+  --shadow: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-focus: 0 0 0 4px #FFB300;
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px; 
+
+  /* Animation - Kept fast to feel responsive, avoiding motion sickness */
+  --animation-duration-fast: 150ms;
+  --animation-duration-normal: 250ms;
+  --animation-duration-slow: 350ms;
+
+  /* Chart colors - High contrast palette */
+  --chart-color-1: #FFB300;
+  --chart-color-2: #0055FF;
+  --chart-color-3: #D32F2F;
+  --chart-color-4: #008A00;
+  --chart-color-5: #8E24AA;
+}
+
+.dark {
+  /* Dark Mode - Pure black background for OLED battery saving and extreme contrast */
+  --background: #000000;
+  --foreground: #FFFFFF;
+
+  --surface: #1A1A1A;
+  --surface-foreground: #FFFFFF;
+  
+  --sidebar: #121212;
+  --sidebar-foreground: #FFFFFF;
+  
+  --card: #1A1A1A;
+  --card-foreground: #FFFFFF;
+  
+  --popup: #222222;
+  --popup-foreground: #FFFFFF;
+  
+  --primary: #FFC107;
+  --primary-foreground: #000000;
+  
+  --secondary: #FFFFFF;
+  --secondary-foreground: #000000;
+  
+  --accent: #448AFF;
+  --accent-foreground: #000000;
+  
+  --muted: #333333;
+  --muted-foreground: #CCCCCC;
+  
+  --success: #4CAF50;
+  --success-foreground: #000000;
+  
+  --error: #F44336;
+  --error-foreground: #FFFFFF;
+  
+  --warning: #FF9800;
+  --warning-foreground: #000000;
+  
+  --info: #29B6F6;
+  --info-foreground: #000000;
+  --info-hover: #03A9F4;
+  --info-active: #039BE5;
+
+  --border: #FFFFFF;
+  
+  --shadow-focus: 0 0 0 4px #FFC107;
+}

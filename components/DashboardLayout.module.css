@@ -1,0 +1,189 @@
+@layer base {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--surface);
+  }
+
+  .header {
+    background-color: var(--card);
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-overlay);
+  }
+
+  .headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-3) var(--spacing-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    text-decoration: none;
+    color: var(--foreground);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-1);
+    transition: box-shadow var(--animation-duration-fast) ease;
+  }
+
+  .brand:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+  }
+
+  .brandIcon {
+    width: 28px;
+    height: 28px;
+    color: var(--primary);
+  }
+
+  .brandText {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    flex: 1;
+    margin-left: var(--spacing-8);
+  }
+
+  .navLink {
+    font-weight: 600;
+  }
+
+  .headerActions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+  }
+
+  .userName {
+    font-weight: 600;
+    color: var(--foreground);
+    font-size: 0.875rem;
+  }
+
+  .btBarWrapper {
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .btBar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-2) var(--spacing-4);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    gap: var(--spacing-3);
+  }
+
+  .btError {
+    background-color: color-mix(in srgb, var(--error) 10%, transparent);
+    color: var(--error);
+    font-weight: 500;
+    justify-content: flex-start;
+  }
+
+  .btSuccess {
+    background-color: color-mix(in srgb, var(--success) 10%, transparent);
+  }
+
+  .btDisconnected {
+    background-color: color-mix(in srgb, var(--warning) 10%, transparent);
+  }
+
+  .btStatusLeft {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    flex-wrap: wrap;
+  }
+
+  .btGreenDot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--success);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--success) 30%, transparent);
+  }
+
+  .btDeviceName {
+    font-weight: 600;
+    color: var(--foreground);
+  }
+
+  .btBattery {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    color: var(--foreground);
+    background: var(--card);
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+  }
+
+  .btModeBadge {
+    font-size: 0.7rem;
+    padding: 0 var(--spacing-2);
+    height: 1.5rem;
+  }
+
+  .btIcon {
+    color: var(--foreground);
+  }
+
+  .btErrorText {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    color: var(--error);
+    margin-left: var(--spacing-2);
+  }
+
+  .btDisconnectBtn {
+    background-color: var(--card);
+  }
+
+  .main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: var(--spacing-6) var(--spacing-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+  }
+
+  @media (max-width: 768px) {
+    .headerContent {
+      flex-wrap: wrap;
+    }
+    
+    .nav {
+      margin-left: 0;
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      padding-top: var(--spacing-2);
+      border-top: 1px solid var(--border);
+    }
+  }
+}

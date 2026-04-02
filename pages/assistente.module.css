@@ -1,0 +1,377 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: calc(100vh - 80px); /* Adjust based on header */
+  background-color: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-4) var(--spacing-6);
+  border-bottom: 2px solid var(--border);
+  background-color: var(--surface);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.speakerToggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  border-width: 2px;
+}
+
+.speakerToggleText {
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .speakerToggleText {
+    display: none;
+  }
+}
+
+.chatArea {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-6);
+  background-color: var(--background);
+}
+
+.emptyState {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.emptyStateText {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  max-width: 32rem;
+  line-height: 1.5;
+}
+
+.messagesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.messageWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.messageUser {
+  justify-content: flex-end;
+}
+
+.messageModel {
+  justify-content: flex-start;
+}
+
+.messageBubble {
+  max-width: 80%;
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.messageUser .messageBubble {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+  border-bottom-right-radius: 4px;
+}
+
+.messageModel .messageBubble {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border-bottom-left-radius: 4px;
+}
+
+.messageText {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.typingIndicator {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  min-height: 1.5rem;
+}
+
+.errorMessageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-2);
+}
+
+.errorMessage {
+  background-color: color-mix(in srgb, var(--error) 15%, transparent);
+  color: var(--error);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--error);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-4);
+  border-top: 2px solid var(--border);
+  background-color: var(--surface);
+}
+
+.imagePreviewArea {
+  margin-bottom: var(--spacing-3);
+  padding: 0 var(--spacing-2);
+}
+
+.imagePreviewContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.imagePreview {
+  height: 5rem;
+  width: auto;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border);
+  object-fit: cover;
+}
+
+.removeImageButton {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--error);
+  color: var(--error-foreground);
+  border: 2px solid var(--background);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.inputControls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.textInput {
+  flex: 1;
+  height: 3rem;
+  font-size: 1.125rem;
+  border-width: 2px;
+  border-radius: var(--radius-full);
+  padding: 0 1.25rem;
+}
+
+.attachButton {
+  border-width: 2px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.micButton {
+  border-width: 2px;
+  border-radius: var(--radius-full);
+  transition: all var(--animation-duration-normal) ease;
+  flex-shrink: 0;
+}
+
+.micActive {
+  animation: pulse var(--animation-duration-slow) infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--error) 40%, transparent);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--error) 0%, transparent);
+  }
+}
+
+.sendButton {
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+/* Hands-Free Mode Styles */
+.handsFreeCard {
+  margin: var(--spacing-4) var(--spacing-6) 0;
+  padding: var(--spacing-4) 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border);
+  background-color: var(--surface);
+  transition: background-color var(--animation-duration-normal) ease,
+              border-color var(--animation-duration-normal) ease;
+}
+
+.handsFreeActive {
+  background-color: color-mix(in srgb, var(--primary) 10%, var(--surface));
+  border-color: var(--primary);
+}
+
+.handsFreeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.handsFreeTitleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.handsFreeIcon {
+  color: var(--primary);
+}
+
+.handsFreeActive .handsFreeIcon {
+  animation: pulseIcon var(--animation-duration-slow) infinite alternate;
+}
+
+.handsFreeTitle {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.handsFreeDesc {
+  margin: var(--spacing-2) 0 var(--spacing-4);
+  font-size: 1.0625rem;
+  color: var(--muted-foreground);
+}
+
+.handsFreeStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.statusLabel {
+  font-weight: 600;
+  font-size: 1.0625rem;
+  color: var(--foreground);
+}
+
+.pulseBadge {
+  animation: badgePulse var(--animation-duration-slow) infinite alternate;
+}
+
+@keyframes badgePulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes pulseIcon {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.processingBadge,
+.speakingBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.handsFreeLastInteraction {
+  background-color: var(--card);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  margin-bottom: var(--spacing-4);
+}
+
+.lastInput,
+.lastResponse {
+  margin: 0 0 var(--spacing-2);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--foreground);
+}
+
+.lastResponse {
+  margin: 0;
+}
+
+.voiceError {
+  color: var(--error);
+  background-color: color-mix(in srgb, var(--error) 15%, transparent);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--error);
+  margin-bottom: var(--spacing-4);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.handsFreeActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--spacing-2);
+}
+
+@media (max-width: 600px) {
+  .handsFreeCard {
+    margin: var(--spacing-3) var(--spacing-3) 0;
+  }
+  .handsFreeHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .handsFreeHeader button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,5 @@
+/* 
+  Estilos para o BluetoothProvider. 
+  Por ser um context provider que não renderiza UI própria (apenas repassa os filhos), 
+  não requer estilos. 
+*/
