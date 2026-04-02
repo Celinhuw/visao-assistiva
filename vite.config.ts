@@ -17,5 +17,8 @@ export default defineConfig(() => ({
   ],
   build: {
     assetsDir: "_assets",
+    rollupOptions: {
+      external: ["@capacitor/core", "@capacitor-community/bluetooth-le"],
+    },
   },
 }));
