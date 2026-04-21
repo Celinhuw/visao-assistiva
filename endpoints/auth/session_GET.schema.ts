@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { User } from "../../helpers/User";
+import { User } from "../../helpers/User.js";
 
 // no schema, just a simple GET request
 export const schema = z.object({});

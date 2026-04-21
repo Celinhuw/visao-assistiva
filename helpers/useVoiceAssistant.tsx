@@ -8,8 +8,8 @@ import React, {
   ReactNode,
 } from "react";
 import superjson from "superjson";
-import { postAssistantApiUrl } from "../endpoints/ai/assistant_POST.schema";
-import { useSettings } from "./useSettings";
+import { postAssistantApiUrl } from "../endpoints/ai/assistant_POST.schema.js";
+import { useSettings } from "./useSettings.js";
 
 export type VoiceAssistantPhase =
   | "idle"

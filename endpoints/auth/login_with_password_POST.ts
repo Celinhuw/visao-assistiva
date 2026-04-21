@@ -1,14 +1,14 @@
 // adapt this to your database schema
-import { db } from "../../helpers/db";
+import { db } from "../../helpers/db.js";
 import { sql } from "kysely";
-import { schema } from "./login_with_password_POST.schema";
+import { schema } from "./login_with_password_POST.schema.js";
 import { compare } from "bcryptjs";
 import { randomBytes } from "crypto";
 import {
   setServerSession,
   SessionExpirationSeconds,
-} from "../../helpers/getSetServerSession";
-import { User } from "../../helpers/User";
+} from "../../helpers/getSetServerSession.js";
+import { User } from "../../helpers/User.js";
 
 // Configuration constants
 const RATE_LIMIT_CONFIG = {

@@ -1,7 +1,7 @@
-import { schema, OutputType } from "./analyze_POST.schema";
+import { schema, OutputType } from "./analyze_POST.schema.js";
 import superjson from "superjson";
-import { db } from "../../helpers/db";
-import { getServerUserSession } from "../../helpers/getServerUserSession";
+import { db } from "../../helpers/db.js";
+import { getServerUserSession } from "../../helpers/getServerUserSession.js";
 
 export async function handle(request: Request) {
   try {

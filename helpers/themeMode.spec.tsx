@@ -1,4 +1,4 @@
-import { switchToDarkMode, switchToLightMode, switchToAutoMode, getCurrentThemeMode } from "./themeMode";
+import { switchToDarkMode, switchToLightMode, switchToAutoMode, getCurrentThemeMode } from "./themeMode.js";
 
 // Helper function to create a mutable MediaQueryList mock.
 function createMediaQueryList(initialMatches: boolean, query = "(prefers-color-scheme: dark)") {

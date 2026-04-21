@@ -1,6 +1,6 @@
 import { Kysely, CamelCasePlugin } from 'kysely'
 import { PostgresJSDialect } from 'kysely-postgres-js'
-import { DB } from './schema'
+import { DB } from './schema.js'
 import postgres from 'postgres'
 
 const dbUrl = process.env.FLOOT_DATABASE_URL;

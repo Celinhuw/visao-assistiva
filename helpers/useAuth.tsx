@@ -6,9 +6,9 @@ import React, {
   useEffect,
 } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { getSession } from "../endpoints/auth/session_GET.schema";
-import { postLogout } from "../endpoints/auth/logout_POST.schema";
-import { User } from "./User";
+import { getSession } from "../endpoints/auth/session_GET.schema.js";
+import { postLogout } from "../endpoints/auth/logout_POST.schema.js";
+import { User } from "./User.js";
 
 // React Query key for auth session. Make sure to optimistically update user infos using this.
 export const AUTH_QUERY_KEY = ["auth", "session"] as const;

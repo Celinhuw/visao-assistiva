@@ -1,7 +1,7 @@
 import { z } from "zod";
 import superjson from 'superjson';
 import type { Selectable } from "kysely";
-import type { FirmwareVersions } from "../../helpers/schema";
+import type { FirmwareVersions } from "../../helpers/schema.js";
 
 export const schema = z.object({});
 

@@ -1,12 +1,12 @@
-import { db } from "./db";
-import { User } from "./User";
+import { db } from "./db.js";
+import { User } from "./User.js";
 
 import {
   CleanupProbability,
   getServerSessionOrThrow,
   NotAuthenticatedError,
   SessionExpirationSeconds,
-} from "./getSetServerSession";
+} from "./getSetServerSession.js";
 
 export async function getServerUserSession(request: Request) {
   const session = await getServerSessionOrThrow(request);

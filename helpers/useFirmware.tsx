@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { getFirmwareList } from "../endpoints/firmware/list_GET.schema";
-import { postFirmwareInstall } from "../endpoints/firmware/install_POST.schema";
+import { getFirmwareList } from "../endpoints/firmware/list_GET.schema.js";
+import { postFirmwareInstall } from "../endpoints/firmware/install_POST.schema.js";
 
 export const FIRMWARE_QUERY_KEY = ["firmwareList"];
 

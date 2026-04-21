@@ -1,8 +1,8 @@
 import { z } from "zod";
 import superjson from "superjson";
-import { VisionModeArrayValues, InteractionTypeArrayValues } from "../../helpers/schema";
+import { VisionModeArrayValues, InteractionTypeArrayValues } from "../../helpers/schema.js";
 import type { Selectable } from "kysely";
-import type { Interactions } from "../../helpers/schema";
+import type { Interactions } from "../../helpers/schema.js";
 
 export const schema = z.object({
   mode: z.enum(VisionModeArrayValues).optional(),

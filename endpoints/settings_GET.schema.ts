@@ -1,7 +1,7 @@
 import { z } from "zod";
 import superjson from "superjson";
 import { Selectable } from "kysely";
-import { Settings } from "../helpers/schema";
+import { Settings } from "../helpers/schema.js";
 
 export const schema = z.object({});
 

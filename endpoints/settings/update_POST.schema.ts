@@ -1,7 +1,7 @@
 import { z } from "zod";
 import superjson from "superjson";
 import { Selectable } from "kysely";
-import { Settings, SpeechRateArrayValues, VoiceTypeArrayValues, VisionModeArrayValues } from "../../helpers/schema";
+import { Settings, SpeechRateArrayValues, VoiceTypeArrayValues, VisionModeArrayValues } from "../../helpers/schema.js";
 
 export const schema = z.object({
   audioVolume: z.number().min(0).max(100).optional(),

@@ -7,8 +7,8 @@ import React, {
   useCallback,
   ReactNode,
 } from "react";
-import { postVisionAnalyze } from "../endpoints/vision/analyze_POST.schema";
-import { useSettings } from "./useSettings";
+import { postVisionAnalyze } from "../endpoints/vision/analyze_POST.schema.js";
+import { useSettings } from "./useSettings.js";
 
 export type VisionMode = "full" | "smart" | null;
 

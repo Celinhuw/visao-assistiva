@@ -1,8 +1,8 @@
-import { schema, OutputType } from "./install_POST.schema";
+import { schema, OutputType } from "./install_POST.schema.js";
 import superjson from 'superjson';
-import { db } from "../../helpers/db";
-import { getServerUserSession } from "../../helpers/getServerUserSession";
-import { NotAuthenticatedError } from "../../helpers/getSetServerSession";
+import { db } from "../../helpers/db.js";
+import { getServerUserSession } from "../../helpers/getServerUserSession.js";
+import { NotAuthenticatedError } from "../../helpers/getSetServerSession.js";
 
 export async function handle(request: Request) {
   try {

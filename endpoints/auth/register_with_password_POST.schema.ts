@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { User } from "../../helpers/User";
+import { User } from "../../helpers/User.js";
 
 export const schema = z.object({
   email: z.string().email("Email is required"),

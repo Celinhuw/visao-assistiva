@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import superjson from "superjson";
-import { postAssistantApiUrl, InputType } from "../endpoints/ai/assistant_POST.schema";
+import { postAssistantApiUrl, InputType } from "../endpoints/ai/assistant_POST.schema.js";
 
 export type MessageRole = "user" | "model";
 

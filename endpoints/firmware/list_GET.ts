@@ -1,8 +1,8 @@
 import superjson from 'superjson';
-import { OutputType } from "./list_GET.schema";
-import { db } from "../../helpers/db";
-import { getServerUserSession } from "../../helpers/getServerUserSession";
-import { NotAuthenticatedError } from "../../helpers/getSetServerSession";
+import { OutputType } from "./list_GET.schema.js";
+import { db } from "../../helpers/db.js";
+import { getServerUserSession } from "../../helpers/getServerUserSession.js";
+import { NotAuthenticatedError } from "../../helpers/getSetServerSession.js";
 
 export async function handle(request: Request) {
   try {

@@ -1,11 +1,11 @@
-import { db } from "../../helpers/db";
-import { schema } from "./register_with_password_POST.schema";
+import { db } from "../../helpers/db.js";
+import { schema } from "./register_with_password_POST.schema.js";
 import { randomBytes } from "crypto";
 import {
   setServerSession,
   SessionExpirationSeconds,
-} from "../../helpers/getSetServerSession";
-import { generatePasswordHash } from "../../helpers/generatePasswordHash";
+} from "../../helpers/getSetServerSession.js";
+import { generatePasswordHash } from "../../helpers/generatePasswordHash.js";
 
 export async function handle(request: Request) {
   try {

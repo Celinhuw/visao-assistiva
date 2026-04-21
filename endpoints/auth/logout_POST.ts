@@ -1,10 +1,10 @@
 // adapt this to your database schema
-import { db } from "../../helpers/db";
+import { db } from "../../helpers/db.js";
 import {
   getServerSessionOrThrow,
   clearServerSession,
   NotAuthenticatedError,
-} from "../../helpers/getSetServerSession";
+} from "../../helpers/getSetServerSession.js";
 
 export async function handle(request: Request) {
   try {

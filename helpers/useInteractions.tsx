@@ -1,7 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { getInteractionsList, InputType as ListInputType } from "../endpoints/interactions/list_GET.schema";
-import { postInteractionsCreate, InputType as CreateInputType } from "../endpoints/interactions/create_POST.schema";
-import { getInteractionsStats } from "../endpoints/interactions/stats_GET.schema";
+import { getInteractionsList, InputType as ListInputType } from "../endpoints/interactions/list_GET.schema.js";
+import { postInteractionsCreate, InputType as CreateInputType } from "../endpoints/interactions/create_POST.schema.js";
+import { getInteractionsStats } from "../endpoints/interactions/stats_GET.schema.js";
 
 export const interactionsKeys = {
   all: ["interactions"] as const,
