@@ -7,9 +7,10 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "jsx": "react-jsx",
     "outDir": "dist-server",
     "rootDir": "."
   },
-  "include": ["server.ts", "endpoints/**/*.ts", "helpers/**/*.ts", "helpers/**/*.tsx"],
+  "include": ["api/**/*.ts", "endpoints/**/*.ts", "endpoints/**/*.tsx", "helpers/**/*.ts", "helpers/**/*.tsx"],
   "exclude": ["node_modules", "dist", "**/*.spec.tsx"]
 }
