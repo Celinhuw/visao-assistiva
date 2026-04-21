@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "api/index.ts",
+      "src": "api-bundle/index.mjs",
       "use": "@vercel/node"
     },
     {
@@ -12,7 +12,7 @@
   "routes": [
     {
       "src": "/_api/(.*)",
-      "dest": "/api/index.ts"
+      "dest": "/api-bundle/index.mjs"
     },
     {
       "src": "/_assets/(.*)",

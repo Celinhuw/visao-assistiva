@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc -p tsconfig.server.json",
+    "build": "vite build && npx esbuild api/index.ts --bundle --platform=node --target=node20 --format=esm --outfile=api-bundle/index.mjs --external:postgres --external:bcryptjs",
     "build:server": "tsc -p tsconfig.server.json",
     "preview": "vite preview"
   },
