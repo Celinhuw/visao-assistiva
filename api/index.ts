@@ -62,5 +62,9 @@ app.post("/_api/auth/register_with_password", (c) =>
   routeHandler(c, () => import("../endpoints/auth/register_with_password_POST.js"))
 );
 
+app.post("/_api/admin/migrate", (c) =>
+  routeHandler(c, () => import("../endpoints/admin/migrate_POST.js"))
+);
+
 export const GET = handle(app);
 export const POST = handle(app);
