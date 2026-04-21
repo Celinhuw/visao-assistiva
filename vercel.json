@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "dist-server/api/index.js": {
-      "runtime": "@vercel/node"
-    }
-  },
   "rewrites": [
     { "source": "/_api/:path*", "destination": "/dist-server/api/index.js" }
   ]
