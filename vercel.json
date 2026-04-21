@@ -1,5 +1,26 @@
 {
-  "rewrites": [
-    { "source": "/_api/:path*", "destination": "/dist-server/api/index.js" }
+  "builds": [
+    {
+      "src": "api/index.ts",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/_api/(.*)",
+      "dest": "/api/index.ts"
+    },
+    {
+      "src": "/_assets/(.*)",
+      "dest": "/dist/_assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/index.html"
+    }
   ]
 }

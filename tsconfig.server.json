@@ -12,5 +12,5 @@
     "rootDir": "."
   },
   "include": ["api/**/*.ts", "endpoints/**/*.ts", "endpoints/**/*.tsx", "helpers/**/*.ts", "helpers/**/*.tsx"],
-  "exclude": ["node_modules", "dist", "**/*.spec.tsx"]
+  "exclude": ["node_modules", "dist", "dist-server", "**/*.spec.tsx"]
 }
