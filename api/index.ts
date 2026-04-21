@@ -8,12 +8,17 @@ async function routeHandler(c: any, importFn: () => Promise<any>) {
     const mod = await importFn();
     const response = await mod.handle(c.req.raw);
     if (!(response instanceof Response) && response.constructor.name !== "Response") {
-      return c.text("Invalid response format", 500);
+      return c.json({ message: "Invalid response format" }, 500);
     }
     return response;
   } catch (e: any) {
     console.error(e);
-    return c.text("Error: " + e.message, 500);
+    return c.json(
+      {
+        message: e?.message || "Error",
+      },
+      500
+    );
   }
 }
 

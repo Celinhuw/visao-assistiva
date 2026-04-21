@@ -27,10 +27,27 @@ export const postRegister = async (
     credentials: "include", // Important for cookies to be sent and received
   });
 
+  const contentType = result.headers.get("content-type") || "";
+
   if (!result.ok) {
-    const errorData = await result.json();
-    throw new Error(errorData.message || "Registration failed");
+    let message = "Registration failed";
+    if (contentType.includes("application/json")) {
+      try {
+        const errorData = await result.json();
+        message = errorData.message || message;
+      } catch {
+        message = await result.text();
+      }
+    } else {
+      message = await result.text();
+    }
+    throw new Error(message);
   }
 
-  return result.json();
+  if (contentType.includes("application/json")) {
+    return result.json();
+  }
+
+  const text = await result.text();
+  return JSON.parse(text);
 };
