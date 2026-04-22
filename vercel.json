@@ -1,11 +1,12 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "api-bundle/index.mjs",
       "use": "@vercel/node"
     },
     {
-      "src": "dist/index.html",
+      "src": "dist/**",
       "use": "@vercel/static"
     }
   ],
@@ -17,6 +18,10 @@
     {
       "src": "/_assets/(.*)",
       "dest": "/dist/_assets/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|ico|svg|woff|woff2))",
+      "dest": "/dist/$1"
     },
     {
       "src": "/(.*)",
