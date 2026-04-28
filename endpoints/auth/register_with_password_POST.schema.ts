@@ -1,10 +1,21 @@
 import { z } from "zod";
-import { User } from "../../helpers/User.js";
+import { User } from "../../helpers/User";
 
 export const schema = z.object({
-  email: z.string().email("Email is required"),
-  password: z.string().min(8, "Password must be at least 8 characters"),
-  displayName: z.string().min(1, "Name is required"),
+  email: z
+    .string()
+    .trim()
+    .toLowerCase()
+    .min(1, { message: "Por favor, informe seu email" })
+    .email({ message: "Por favor, informe um email válido" }),
+  password: z
+    .string()
+    .min(8, { message: "A senha deve ter pelo menos 8 caracteres" }),
+  displayName: z
+    .string()
+    .trim()
+    .min(1, { message: "Por favor, informe seu nome" })
+    .max(100, { message: "Nome muito longo" }),
 });
 
 export type OutputType = {
@@ -24,30 +35,13 @@ export const postRegister = async (
       "Content-Type": "application/json",
       ...(init?.headers ?? {}),
     },
-    credentials: "include", // Important for cookies to be sent and received
+    credentials: "include",
   });
 
-  const contentType = result.headers.get("content-type") || "";
-
   if (!result.ok) {
-    let message = "Registration failed";
-    if (contentType.includes("application/json")) {
-      try {
-        const errorData = await result.json();
-        message = errorData.message || message;
-      } catch {
-        message = await result.text();
-      }
-    } else {
-      message = await result.text();
-    }
-    throw new Error(message);
+    const errorData = await result.json();
+    throw new Error(errorData.message || "Falha no cadastro");
   }
 
-  if (contentType.includes("application/json")) {
-    return result.json();
-  }
-
-  const text = await result.text();
-  return JSON.parse(text);
+  return result.json();
 };

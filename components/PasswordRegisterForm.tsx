@@ -146,7 +146,7 @@ export const PasswordRegisterForm: React.FC<PasswordRegisterFormProps> = ({
             />
           </FormControl>
           <FormDescription>
-            At least 8 characters with uppercase, lowercase, and number
+            Pelo menos 8 caracteres
           </FormDescription>
           <FormMessage />
         </FormItem>
